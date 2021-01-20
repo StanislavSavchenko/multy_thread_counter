@@ -1,0 +1,8 @@
+/*/target/
+target/
+*.iml
+.idea
+*.log
+/*/logs/
+*.xlsx
+LOG_FILE_IS_UNDEFINED
