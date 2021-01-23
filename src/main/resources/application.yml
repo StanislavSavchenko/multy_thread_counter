@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: multy-thread-counter
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://database/requestdb
+    username: user
+    password: secret
+
+server:
+  servlet:
+    context-path: /api
+  port: 8001
+
+swagger:
+  base-path: ${server.servlet.context-path}
+
+counter:
+  min-border: 0
+  max-border: 100
+  init-value: 50
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: WARN
+    com.zaxxer.hikari: INFO
+    com.bekind.core: DEBUG
+  file:
+    name: ${logging.file.path}config.log
+    path: logs/
